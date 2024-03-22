@@ -1,0 +1,22 @@
+@use 'sass:math';
+@use 'sass:map';
+
+@mixin desktop() {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+@function dpx($px) {
+  @return math.div($px, 1440) * 100vw;
+}
+
+@function mpx($px) {
+  @return math.div($px, 375) * 100vw;
+}

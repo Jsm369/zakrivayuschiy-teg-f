@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "prettier": "3.2.5",
+    "sass": "^1.72.0"
+  },
+  "name": "zakrivayuschiy-teg-f",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch ./styles/scss:./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
