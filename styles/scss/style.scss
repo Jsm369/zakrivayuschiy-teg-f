@@ -20,7 +20,6 @@
   min-inline-size: 100%;
   min-block-size: 100dvb;
   background-image: var(--bg-gradient);
-  background-color: var(--second-color);
   font-family: var(--main-font-family);
   color: var(--main-color);
   font-weight: var(--text-font-weight);
@@ -44,39 +43,27 @@
   }
 
   &__container {
-    background-color: var(--second-color);
+    background-color: var(--additional-color);
     font-family: var(--accent-font-family);
     text-transform: uppercase;
     border-color: var(--main-color);
     border-style: solid;
 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-width: 2px;
+
     @include desktop {
       box-sizing: content-box;
+      padding: dpx(136) dpx(0) dpx(25);
 
       width: dpx(696);
-      height: dpx(364);
-      border-width: dpx(2);
     }
 
     @include mobile {
       width: 100%;
-      height: mpx(327);
-      border-width: mpx(2);
-    }
-  }
-
-  &__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    @include desktop {
-      padding: dpx(136) dpx(0) dpx(25);
-    }
-
-    @include mobile {
-      padding: mpx(120);
+      padding: mpx(120) mpx(14) mpx(25);
     }
   }
 
@@ -215,19 +202,18 @@
 }
 
 .card {
-  background-color: var(--second-color);
+  background-color: var(--additional-color);
   border-color: var(--main-color);
   border-style: solid;
   box-sizing: content-box;
+  border-width: 2px;
 
   @include desktop {
     width: dpx(696);
-    border-width: dpx(2);
     margin-bottom: dpx(52);
   }
 
   @include mobile {
-    border-width: mpx(2);
     margin-bottom: mpx(52);
   }
 
@@ -244,6 +230,7 @@
   &__title {
     border-bottom-style: solid;
     border-bottom-color: var(--main-color);
+    border-bottom-width: 2px;
 
     color: var(--main-color);
     font-weight: var(--title-font-weight);
@@ -252,14 +239,12 @@
       padding: dpx(4) dpx(10);
       font-size: dpx(18);
       line-height: dpx(22);
-      border-bottom-width: dpx(2);
     }
 
     @include mobile {
       padding: mpx(4) mpx(12) mpx(4) mpx(6);
       font-size: mpx(18);
       line-height: mpx(22);
-      border-bottom-width: mpx(2);
     }
   }
 
@@ -286,21 +271,19 @@
     line-height: 100%;
     opacity: 0.5;
     z-index: 2;
+    text-stroke: 1px var(--additional-color);
+    -webkit-text-stroke: 1px var(--additional-color);
 
     @include desktop {
       font-size: dpx(14);
       right: dpx(25);
       top: dpx(23);
-      text-stroke: dpx(1) var(--second-color);
-      -webkit-text-stroke: dpx(1) var(--second-color);
     }
 
     @include mobile {
       font-size: mpx(14);
       right: mpx(11);
       top: mpx(25);
-      text-stroke: mpx(1) var(--second-color);
-      -webkit-text-stroke: mpx(1) var(--second-color);
     }
   }
 
@@ -357,21 +340,20 @@
       justify-content: center;
       align-items: center;
       outline: none;
-      background-color: var(--second-color);
+      background-color: var(--additional-color);
       border-color: var(--main-color);
       border-style: solid;
+      border-width: 2px;
 
       @include desktop {
         width: dpx(130);
         height: dpx(38);
-        border-width: dpx(2);
         margin-left: dpx(6);
       }
 
       @include mobile {
         width: mpx(130);
         height: mpx(38);
-        border-width: mpx(2);
         margin-left: mpx(6);
       }
 
@@ -405,14 +387,7 @@
       border-color: var(--main-color);
       border-style: solid;
       box-sizing: content-box;
-
-      @include desktop {
-        border-width: dpx(2);
-      }
-
-      @include mobile {
-        border-width: mpx(2);
-      }
+      border-width: 2px;
     }
 
     @include desktop {
@@ -468,7 +443,7 @@
   }
 
   @include mobile {
-    padding-top: mpx(54);
+    padding-top: mpx(51);
     padding-bottom: mpx(102);
   }
 
@@ -479,24 +454,23 @@
     align-items: center;
     justify-content: center;
     font-family: var(--accent-font-family);
-    background-color: var(--second-color);
+    background-color: var(--additional-color);
     color: var(--main-color);
     line-height: 90%;
     cursor: pointer;
     border-color: var(--main-color);
     border-style: solid;
+    border-width: 2px;
 
     @include desktop {
-      width: dpx(335);
-      height: dpx(51);
-      border-width: dpx(2);
+      width: dpx(339);
+      height: dpx(55);
       font-size: dpx(14);
     }
 
     @include mobile {
-      width: mpx(306);
-      height: mpx(80);
-      border-width: mpx(2);
+      width: mpx(309);
+      height: mpx(84);
       font-size: mpx(14);
     }
   }
@@ -505,13 +479,11 @@
     display: flex;
     position: relative;
     font-family: var(--accent-font-family);
-    background-color: var(--second-color);
     line-height: 90%;
     transition: all 0.5s ease-in-out;
     align-items: center;
 
     z-index: 3;
-    background-color: transparent;
 
     @include desktop {
       flex-direction: row;
@@ -540,41 +512,45 @@
 }
 
 .modal {
-  position: fixed;
-  z-index: 99;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: opacity 0.3s ease;
-  inset: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgb(0 0 0 / 0.75);
-  text-transform: uppercase;
-  font-family: var(--accent-font-family);
-  color: var(--main-color);
+
+  &[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+
+  &[open]::backdrop {
+    background-color: rgb(0 0 0 / 0.75);
+  }
+
+  &:not([open]) {
+    opacity: 0;
+    pointer-events: none;
+  }
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--second-color);
+    background-color: var(--additional-color);
     border-color: var(--main-color);
     border-style: solid;
+    border-width: 2px;
+    text-transform: uppercase;
+    font-family: var(--accent-font-family);
+    color: var(--main-color);
 
     @include desktop {
       width: dpx(357);
-      height: dpx(193);
-      border-width: dpx(2);
-      padding: dpx(31.5) dpx(32.5) dpx(30.5) dpx(31.5);
+      padding: dpx(29);
     }
 
     @include mobile {
       width: mpx(341);
-      height: mpx(195);
-      border-width: mpx(2);
-      padding: mpx(32) mpx(42);
+      padding: mpx(30) mpx(40);
     }
   }
 
@@ -608,6 +584,7 @@
   }
 
   &__text {
+    line-height: 150%;
     @include desktop {
       font-size: dpx(14);
     }
@@ -627,14 +604,13 @@
     width: 100%;
     border-color: var(--main-color);
     border-style: solid;
+    border-width: 2px;
 
     @include desktop {
-      border-width: dpx(2);
       height: dpx(38);
     }
 
     @include mobile {
-      border-width: mpx(2);
       height: mpx(38);
     }
   }
@@ -642,9 +618,10 @@
   &__btn-text {
     position: relative;
     font-family: var(--accent-font-family);
-    background-color: var(--second-color);
+    background-color: var(--additional-color);
     line-height: 150%;
     transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
 
     z-index: 3;
     background-color: transparent;
@@ -656,10 +633,5 @@
     @include mobile {
       font-size: mpx(14);
     }
-  }
-
-  &:not([open]) {
-    opacity: 0;
-    pointer-events: none;
   }
 }

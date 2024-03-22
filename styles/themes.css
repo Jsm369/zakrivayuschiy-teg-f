@@ -10,9 +10,9 @@
     repeating-linear-gradient(0.25turn, #000 0 2px, transparent 2px 4px),
     linear-gradient(180deg, rgb(0, 127, 12), rgb(0, 67, 6) 100%);
   --main-color: #00cc14;
-  --title-font-weight: 800;
+  --title-font-weight: 785;
   --text-font-weight: 400;
-  --second-color: #000;
+  --additional-color: #000;
 }
 
 :root.theme-light {
@@ -22,7 +22,7 @@
   --main-color: #000000;
   --title-font-weight: 700;
   --text-font-weight: 400;
-  --second-color: #fff;
+  --additional-color: #fff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,7 +31,7 @@
       repeating-linear-gradient(0.25turn, #d3d3d3 0 2px, transparent 2px 4px),
       linear-gradient(180deg, rgb(231, 231, 231) 0.01%, rgb(26, 26, 26) 100%);
     --main-color: #000000;
-    --second-color: #fff;
+    --additional-color: #fff;
     --title-font-weight: 700;
     --text-font-weight: 400;
   }

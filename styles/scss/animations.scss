@@ -31,7 +31,7 @@
   }
 
   &:hover {
-    color: var(--second-color);
+    color: var(--additional-color);
     &::before {
       width: 100%;
     }
@@ -62,7 +62,7 @@
 
   & .main-body {
     transition: 0.3s ease;
-    fill: var(--second-color);
+    fill: var(--additional-color);
   }
 
   & .core {
@@ -85,12 +85,12 @@
   &:active {
     & .main-body {
       transition: 0.3s ease 0.05s;
-      fill: var(--heart-red-color);
+      fill: var(--active-heart-color);
     }
 
     & .core {
       transition: 0.3s ease;
-      fill: var(--heart-red-color);
+      fill: var(--active-heart-color);
     }
   }
 
@@ -100,21 +100,21 @@
 
     & .contour {
       transition: 0.3s ease 0.06s;
-      fill: var(--heart-red-color);
+      fill: var(--active-heart-color);
     }
 
     & .main-body {
       transition: 0.3s ease;
-      fill: var(--heart-red-color);
+      fill: var(--active-heart-color);
     }
 
     & .core {
       transition: 0.3s ease;
-      fill: var(--heart-red-color);
+      fill: var(--active-heart-color);
     }
 
     & .sparks {
-      fill: var(--heart-red-color);
+      fill: var(--active-heart-color);
 
       animation: sparksVisible 0.3s ease-in 0.3s both;
     }
