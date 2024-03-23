@@ -585,12 +585,17 @@
 @media (orientation: landscape) {
   .modal__text {
     font-size: 0.9722222222vw;
+    width: 16.25vw;
   }
 }
 @media (orientation: portrait) {
   .modal__text {
     font-size: 3.7333333333vw;
+    width: 52.8vw;
   }
+}
+.modal__form {
+  width: 100%;
 }
 .modal__btn {
   position: relative;

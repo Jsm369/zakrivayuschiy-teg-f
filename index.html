@@ -116,6 +116,7 @@
                 </button>
                 <button
                   class="card__footer-btn card__like-button btn-animation"
+                  type="button"
                 >
                   <span class="card__footer-btn-text button__text">Like</span>
                 </button>
@@ -181,6 +182,7 @@
                 </button>
                 <button
                   class="card__footer-btn card__like-button btn-animation"
+                  type="button"
                 >
                   <span class="card__footer-btn-text button__text">Like</span>
                 </button>
@@ -244,6 +246,7 @@
                 </button>
                 <button
                   class="card__footer-btn card__like-button btn-animation"
+                  type="button"
                 >
                   <span class="card__footer-btn-text button__text">Like</span>
                 </button>
@@ -308,6 +311,7 @@
                 </button>
                 <button
                   class="card__footer-btn card__like-button btn-animation"
+                  type="button"
                 >
                   <span class="card__footer-btn-text button__text">Like</span>
                 </button>
@@ -373,6 +377,7 @@
                 </button>
                 <button
                   class="card__footer-btn card__like-button btn-animation"
+                  type="button"
                 >
                   <span class="card__footer-btn-text button__text">Like</span>
                 </button>
@@ -435,6 +440,7 @@
                 </button>
                 <button
                   class="card__footer-btn card__like-button btn-animation"
+                  type="button"
                 >
                   <span class="card__footer-btn-text button__text">Like</span>
                 </button>
@@ -499,6 +505,7 @@
                 </button>
                 <button
                   class="card__footer-btn card__like-button btn-animation"
+                  type="button"
                 >
                   <span class="card__footer-btn-text button__text">Like</span>
                 </button>
@@ -566,6 +573,7 @@
                 </button>
                 <button
                   class="card__footer-btn card__like-button btn-animation"
+                  type="button"
                 >
                   <span class="card__footer-btn-text button__text">Like</span>
                 </button>
@@ -592,7 +600,7 @@
             </span>
           </button>
           <dialog class="modal" id="modal-id">
-            <form class="modal__container" method="dialog">
+            <div class="modal__container">
               <div class="modal__content">
                 <svg
                   aria-hidden="true"
@@ -601,20 +609,18 @@
                 >
                   <use href="svg/floppy.svg#floppy" />
                 </svg>
-                <p class="modal__text">
-                  Вставьте<br />
-                  дискету, чтобы<br />
-                  продолжить
-                </p>
+                <p class="modal__text">Вставьте дискету, чтобы продолжить</p>
               </div>
-              <button
-                type="button"
-                class="modal__btn btn-animation dialog-close"
-                onclick="window['modal-id'].close()"
-              >
-                <span class="modal__btn-text">ок</span>
-              </button>
-            </form>
+              <form class="modal__form" method="dialog">
+                <button
+                  type="button"
+                  class="modal__btn btn-animation dialog-close"
+                  onclick="window['modal-id'].close()"
+                >
+                  <span class="modal__btn-text">ок</span>
+                </button>
+              </form>
+            </div>
           </dialog>
         </div>
       </section>
